@@ -68,13 +68,13 @@ const devMountainClassPet = dog.name
 //Add a method to dog called bark.
 //The value of bark should be a function that returns the string "Woof woof".
 
-dog.bark = function(bark){
-  return "Woof woof"
+dog.bark = function bark(bark){
+  return `Woof woof`;
 }
 
 //Store the result of invoking the bark method in a variable called ruff.
 
-let ruff = dog.bark
+let ruff = dog.bark()
 
 //////////////////PROBLEM 6////////////////////
 
@@ -87,8 +87,14 @@ let ruff = dog.bark
 
 //Return mySum.
 
-//Code Here
-
+function looper(array1){
+  let mySum = 0;
+  for (let i = 0; i < array1.length; i++) {
+    if (array1[i] % 2 !== 0 || array1[i] >= 100){
+      mySum += array1[i]
+    }
+  } return mySum
+}
 //////////////////PROBLEM 7////////////////////
 
 //Given the following function called math
@@ -100,12 +106,14 @@ function math(num1, num2, callback) {
 //Write a function called add that takes in two parameters and
 //returns the result of adding them together.
 
-//Code Here
+function add(num3, num4){
+  return num3 + num4;
+}
 
 //Now invoke math, passing in the numbers 3 and 4, and your add function,
 //storing the result in the variable mathSum.
 
-//Code Here
+let mathSum = math(3, 4, add)
 
 //////////////////PROBLEM 8////////////////////
 
@@ -120,7 +128,9 @@ function sampleCallbackTwo() {
   return "I am also a callback function";
 }
 
-//Code Here
+function invoker(){
+  sampleCallbackOne;
+}
 
 //////////////////PROBLEM 9////////////////////
 
